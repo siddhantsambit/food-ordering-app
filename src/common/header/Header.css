@@ -1,0 +1,25 @@
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    background: #A9A9A9;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.tabs{
+    margin-bottom: 20px;
+}
+
+.dispNone{
+    display: none;
+}
+
+.dispBlock{
+    display: block;
+}
+.red{
+    color: red;
+}
