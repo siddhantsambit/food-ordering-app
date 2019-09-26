@@ -2,10 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
+import 'typeface-roboto';
+import Home from './screens/home/Home';
 
 ReactDOM.render(
     <div>
-        Food Ordering App
+        <Header />
     </div>,
     document.getElementById('root')
 );
