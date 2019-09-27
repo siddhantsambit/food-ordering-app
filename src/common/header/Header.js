@@ -128,10 +128,10 @@ class Header extends Component{
         const { classes } = this.props;
         return(
             <div className="header"> 
-         <div > 
+         <div className="headerItem"> 
          <FastfoodIcon>Logo</FastfoodIcon>
          </div>
-         <div >
+         <div className="headerItem">
          <Input
          className={classes.searchStyle}
           placeholder="Search by Restaurant Name"
@@ -143,9 +143,9 @@ class Header extends Component{
         /> 
              
          </div>
-         <div>
+         <div className="headerItem">
              
-         <Button variant="contained" color="default" onClick={this.openModalHandler}><AccountCircleIcon></AccountCircleIcon>Login</Button>
+         <Button variant="contained" color="default" onClick={this.openModalHandler}><AccountCircleIcon style={{paddingRight:5}}></AccountCircleIcon>Login</Button>
          </div>
          <Modal 
             ariaHideApp={false} 

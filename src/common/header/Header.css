@@ -23,3 +23,15 @@
 .red{
     color: red;
 }
+
+@media (max-width: 992px) {
+    .header {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .headerItem{
+        margin-bottom: 10px;
+    }
+}
