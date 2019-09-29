@@ -35,3 +35,19 @@
         margin-bottom: 10px;
     }
 }
+
+.registered{
+    padding: 10px;
+    background-color: black;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    left:0;
+}
+
+.codemsg{
+    color: red;
+    font-size: 10px;
+    width: 200px;
+    word-wrap: normal;
+}

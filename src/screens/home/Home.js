@@ -1,8 +1,10 @@
-import React, {Component} from 'react';
-import Header from '../../common/header/Header';
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+import Details from '../../screens/details/Details';
 import { withStyles } from '@material-ui/core/styles';
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
+import Header from '../../common/header/Header';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
@@ -10,7 +12,6 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import 'font-awesome/css/font-awesome.min.css';
-
 
 const styles = theme => ({
     cardRoot: {
@@ -80,15 +81,18 @@ class Home extends Component {
         xhr.send(data);
     }
 
+    restaurantClickHandler = (restaurantId) => {
+        ReactDOM.render(<Details restaurantId={restaurantId} />, document.getElementById('root'));
+    }
     render() {
         const { classes } = this.props;
         return (
             <div>
-                <Header />
+                <Header baseUrl={this.props.baseUrl}/>
                 <div >
                     <GridList cellHeight={400} className={classes.gridList} cols={4} >
                         {this.state.restaurantsList.map(restaurant => (
-                            <GridListTile key={restaurant.id} style={{ padding: 10 }} >
+                            <GridListTile key={restaurant.id} style={{ padding: 10 }} onClick={() =>this.restaurantClickHandler(restaurant.id)} >
                                 <Card className={classes.card} style={{ border: "1px solid #dcdcdc" }}>
                                     <CardActionArea>
                                         <CardMedia
